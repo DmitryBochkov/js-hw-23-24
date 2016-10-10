@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <script type="text/template" id="wrapper-template">
+      <div class="todo-wrapper">
+        <h1 class="todo-header">todos</h1>
+        <div class="todo-controls">
+          <input type="text" class="inp inp_item-value">
+          <button class="btn btn_add-item">Add a Task</button>
+        </div>
+        <ul class="todo-item-list"></ul>
+      </div>
+    </script>
+    <script type="text/template" id="list-template">
+      <% for (var i = 0; i < data.length; i++) {%>
+        <li class="todo-item">
+          <span class="todo-text"><%= data[i] %></span>
+          <input type="text" class="inp inp_text-edit">
+          <span class="btn btn_save-todo">Save</span>
+          <span class="btn btn_edit-todo">Edit</span>
+          <span class="btn btn_delete-todo">Delete</span>
+        </li>
+        <% };%>
+      </script>
+
+    <script data-main="js/main" src="js/require.js"></script>
+  </body>
+</html>
